@@ -34,3 +34,13 @@ router.put("/api/workouts/:id", (req, res) => {
         });
 
 });
+
+//allows for user to create workout
+router.post("/api/workouts", ({ body }, res) => {
+
+    db.Workout.create(body).then((dbWorkout => {
+        res.json(dbWorkout);
+    })).catch(err => {
+        res.json(err);
+    });
+});
