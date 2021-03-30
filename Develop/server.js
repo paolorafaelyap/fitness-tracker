@@ -1,6 +1,6 @@
 //dependencies
 const express = require("express");
-const mongoose = require("mogoose");
+const mongoose = require("mongoose");
 //request logger middleware
 const logger = require("morgan");
 
